@@ -69,3 +69,12 @@ def test_get_nth_fibonacci_ten():
     # Assert
     assert result == 55
 
+def test_get_nth_fibonacci_twenty():
+    """Check a larger fibonacci value for correctness."""
+    assert get_nth_fibonacci(20) == 6765
+
+
+def test_get_nth_fibonacci_negative_raises():
+    """get_nth_fibonacci should raise for negative n."""
+    with pytest.raises(ValueError):
+        get_nth_fibonacci(-1)
